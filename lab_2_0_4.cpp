@@ -1,15 +1,12 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-int main(void) {
-    int sys, cnt;
-    float m, ft, in;
-    m = 0.0;
-    ft = 0.0;
-    in = 0.0;
-    sys = 0;
-    cnt = 0;
+int main() {
+    int sys = 0, cnt = 0, ift = 0;
+    float m = 0.0, ft = 0.0, in = 0.0;
+
     cout << m << endl << ft << endl << in << endl << sys << endl ;
 
     /* *************************************
@@ -58,7 +55,15 @@ int main(void) {
     /* *************************************
      ***** Calculo de metrico a imperial ***
      ************************************ */
-
+    if (sys == 0) {
+        in = m / 0.0254;
+        ift = in / 12;
+        in = in - (ift * 12);
+        cout << m << " metros son: "<< ift <<"' y " << in << "\"" << endl;
+    } else {
+            m = (ft * 12 + in) * 0.0254;
+            cout << ft <<"' " << in << "\" son "<< m << " metros." << endl;
+        }
 
 
 
