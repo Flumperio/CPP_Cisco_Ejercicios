@@ -47,8 +47,31 @@ int main() {
     week += year / 400;
     week =  week % 7;
 
-    switch (week == 0)
-        weekday == "Domingo";
-    cout << "El día de la semana es: " << week << endl;
+    switch (week) {
+        case 0:
+            weekday = "Domingo";
+            break;
+        case 1:
+            weekday = "Lunes";
+            break;
+        case 2:
+            weekday = "Martes";
+            break;
+        case 3:
+            weekday = "Miércoles";
+            break;
+        case 4:
+            weekday = "Jueves";
+            break;
+        case 5:
+            weekday = "Viernes";
+            break;
+        case 6:
+            weekday = "Sábado";
+            break;
+        default:
+            weekday = "";
+    }
+    cout << "El día de la semana es: " << weekday << endl;
 }
 
