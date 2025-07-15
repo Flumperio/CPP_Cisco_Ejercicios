@@ -1,4 +1,4 @@
-# Nombre del compilador
+# Nombre del compilador  :wq
 CXX = clang++
 
 # Opciones del compilador
