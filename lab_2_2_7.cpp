@@ -4,7 +4,7 @@
 // 2.2.7   LAB   Collatz's hypothesis
 // *****************************************
 #include <iostream>
-#include <string>
+#include <ostream>
 using namespace std;
 
 int main () {
@@ -26,19 +26,18 @@ int main () {
 // *****************************************
 // ******** Calculo ******** ***************
 // *****************************************
+    cout << "El número " << input_Number << endl;
+    
     c_0 = input_Number;
     while (c_0 != 1) {
+        if (c_0 % 2 == 0) {
         c_0 /= 2;
-        
+        } 
+        else {
+        c_0 = 3 * c_0 + 1;
+        }
+        contador += 1;
+        cout << "Paso: " << contador << " valor de c_0: " << c_0 << endl;
     }
-
-
-
-
-
-
-
-
-
-
+    cout << "Total de pasos: " << contador << endl;
 }

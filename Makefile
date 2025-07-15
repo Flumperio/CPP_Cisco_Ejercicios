@@ -5,7 +5,7 @@ CXX = clang++
 CXXFLAGS = -Wall -std=c++17
 
 # Archivos fuente y objeto
-SRCS = lab_2_2_7.cpp
+SRCS = lab_2_2_8.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Nombre del ejecutable
