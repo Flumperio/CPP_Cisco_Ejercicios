@@ -2,17 +2,21 @@
 CXX = clang++
 
 # Opciones del compilador
-CXXFLAGS = -Wall -std=c++17
+CXXFLAGS = -Wall -g -std=c++17
 
 # Archivos fuente y objeto
-SRCS = lab_2_2_8.cpp
+SRCS = lab_2_2_11.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Nombre del ejecutable
-TARGET = programa
+TARGET = a.out
 
 # Regla por defecto
 all: $(TARGET)
+
+# Regla para debug
+debug: $(OBJS)
+	$(CXX) -g -o $(TARGET) $(OBJS)
 
 # Cómo construir el ejecutable
 $(TARGET): $(OBJS)
