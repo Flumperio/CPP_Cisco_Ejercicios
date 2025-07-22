@@ -8,35 +8,40 @@
 using namespace std;
 
 int main () {
-    int     n = 0;
+    int     h = 0;
 // *****************************************
 // ******** Entrada de datos ***************
 // *****************************************
 
-    cout << "Introduce el número ladrillos: ";
-    cin >> n;
-    if ((n <= 0 or n > 200) or cin.fail()){
+    cout << "Introduce el alto de la piramide (más de 2 y menos de 9): ";
+    cin >> h;
+    if ((h < 2 or h > 9) or cin.fail()){
         cin.clear();
         cin.ignore(1000, '\n');
-        cout << "Error. No está en el rango de numeros permitidos. Debe ser un número positivo, entre 1 y 200.";
+        cout << "Error. No está en el rango de numeros permitidos. Debe ser un número positivo, entre 2 y 9.";
         return 255;
     }
 
 // *****************************************
 // ******** Dibujo *************************
 // *****************************************
-    for (int alto = 1; alto <= n; alto ++) {
-        for (int ancho = 1; ancho <= n * 2; ancho ++){
-            if ((alto == 1 || alto == n) && (ancho == 1 || ancho == n * 2)) {
-                cout << "+";
-            } else if (alto == 1 || alto == n) {
-                cout << "-";
-            } else if (ancho ==1 || ancho == n * 2) {
-                cout << "|";
-            } else {
-            cout << " ";
+
+    for (int alto = 0; alto < h; alto ++){
+        for (int piramides = 0; piramides < 3; piramides++) {
+            for (int blanco = 0; blanco < h - alto; blanco ++){
+                cout << " ";
             }
-        }
+            for (int punto = 0; punto <= (alto * 2); punto ++){
+                cout << "*";
+                for (; ((punto < (alto * 2) - 1) && alto != h - 1); punto ++){
+                    cout << " ";
+                }
+            }
+            for (int blanco = 0; blanco < h - alto; blanco ++){
+                cout << " ";
+            }
+        } 
         cout << endl;
     }
+
 }

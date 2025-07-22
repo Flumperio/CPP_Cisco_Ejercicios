@@ -5,11 +5,11 @@ CXX = clang++
 CXXFLAGS = -Wall -g -std=c++17
 
 # Archivos fuente y objeto
-SRCS = lab_2_2_11.cpp
+SRCS = lab_2_2_15.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Nombre del ejecutable
-TARGET = a.out
+TARGET = program.out
 
 # Regla por defecto
 all: $(TARGET)
