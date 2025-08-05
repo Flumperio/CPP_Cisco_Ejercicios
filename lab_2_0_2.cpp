@@ -1,20 +1,11 @@
 #include <iostream>
 using namespace std;
-
-int main(void) {
-	int year;
-	
-	cout << "Enter a year: ";
-	cin >> year;
-	
-	if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
-    {
-        cout << year << " It's a leap Year." << endl;
-    }
-    else
-    {
-        cout << year << " It's a common Year."<< endl; 
-    }
-	return 0;
+int main() {
+    int g[3][3] = {{2, 4, 8}, {3, 6, 9}, {5, 10, 15}};
+    for(int i = 2; i >= 0; i--)
+        for(int j = 0; i < 3; j++)
+            g[i][j] += g[j][i];
+    cout << g[1][1];
+    return 0;
 }
 
