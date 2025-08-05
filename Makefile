@@ -28,5 +28,5 @@ $(TARGET): $(OBJS)
 
 # Limpieza de archivos intermedios
 clean:
-	rm -f *.o $(TARGET)
+	rm -f *.o $(TARGET) *.exe
 

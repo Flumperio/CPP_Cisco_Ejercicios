@@ -9,15 +9,25 @@ using namespace std;
 int main(void) {
 
 	int matrix[10][10] = { };
+	int *puntero = nullptr, x = 1, y = 1;
+	//puntero = &matrix[0][0]; valen los dos casos.
+	puntero = *matrix;
 
-	// Insert your code here
-
-	for(int i = 0; i < 10; i++) {
-		for(int j = 0; j < 10; j++) {
+	while (x <= 10) {
+		while (y <= 10) {
 			cout.width(4);
-			cout << matrix[i][j];
+			*puntero = x*y;
+			puntero ++, y++;
 		}
 		cout << endl;
+		y = 1, x++;
 	}
-	return 0;
+ 	for(int i = 0; i < 10; i++) {
+ 		for(int j = 0; j < 10; j++) {
+ 			cout.width(4);
+ 			cout << matrix[i][j];
+ 		}
+ 		cout << endl;
+ 	}
+ 	return 0;
 }
