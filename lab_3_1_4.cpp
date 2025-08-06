@@ -19,7 +19,6 @@ int main(void) {
 			*puntero = x*y;
 			puntero ++, y++;
 		}
-		cout << endl;
 		y = 1, x++;
 	}
  	for(int i = 0; i < 10; i++) {
