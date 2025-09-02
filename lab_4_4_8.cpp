@@ -31,7 +31,6 @@ bool check_octetos (const string &direccion_IP) {
 bool check_numbers (const string &direccion_IP){
     string octeto = direccion_IP.substr(0 , direccion_IP.find('.'));
 	string ip_rest = direccion_IP.substr(direccion_IP.find('.')+1);
-	size_t position = 0;
     for (int contador = 0; contador < 4; contador ++) {
 	    if (atoi(octeto.c_str()) > 255)
 	    	return false;
